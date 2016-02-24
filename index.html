@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ouroboros</title>
+    <style>
+        body, html {
+            padding: 0;
+            margin: 0;
+            background: black;
+        }
+
+        #controls{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 1em;
+            border-radius: 8px;
+        }
+
+        .js-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<canvas id="visual"></canvas>
+<div id="controls" class="js-hidden">
+    <div>
+        <label>Min Particle Size</label>
+        <input type="range" min="1" max="20" value="12" id="min-size" name="min-size" class="js-controller">
+    </div>
+    <div>
+        <label for="max-size">Max Particle Size</label>
+        <input type="range" min="1" max="20" value="12" id="max-size" name="max-size" class="js-controller">
+    </div>
+    <div>
+        <label for="hue-shift">Colour Variance</label>
+        <input type="range" min="0.01" max="1" value="0.1" step="0.01" id="hue-shift" name="hue-shift" class="js-controller">
+    </div>
+    <div>
+        <label for="particle-count">Particle Count</label>
+        <input type="range" min="50" max="2000" value="500" step="10" id="particle-count" name="particle-count" class="js-controller">
+    </div>
+    <div>
+        <label for="auto-fade">Auto Fade <input type="checkbox" name="auto-fade" id="auto-fade" class="js-controller"></label>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
